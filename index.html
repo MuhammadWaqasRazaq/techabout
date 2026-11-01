@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PKHosting - VPS Hosting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Price announcement for screen readers -->
+    <p id="price-announcement" class="sr-only" aria-live="polite" aria-atomic="true"></p>
+    
+    <!-- Header / Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <span class="nav-brand-logo">PK Hosting</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#pricing" class="nav-link">Hosting</a></li>
+                <li class="nav-item"><a href="#comparison" class="nav-link">Domains</a></li>
+                <li class="nav-item"><a href="#pricing" class="nav-link">Servers</a></li>
+                <li class="nav-item"><a href="#faq" class="nav-link">SSL</a></li>
+                <li class="nav-item"><a href="#footer" class="nav-link">Support</a></li>
+            </ul>
+            <a href="#pricing" class="nav-cta">Get Started</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-eyebrow">VPS HOSTING</span>
+                <h1 class="hero-title">Powerful VPS Hosting Built for Growing Workloads</h1>
+                <p class="hero-subtitle">
+                    Reliable VPS resources for websites, APIs and growing applications with predictable pricing, 
+                    scalable resources, and full server control. Suitable for applications, websites and development workloads.
+                </p>
+                <div class="hero-actions">
+                    <a href="#pricing" class="btn btn-primary">Compare VPS Plans</a>
+                    <a href="#footer" class="btn btn-secondary">Talk to Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="pricing-header">
+                <h2 class="section-title">VPS Pricing Plans</h2>
+                <p class="section-subtitle">Choose the perfect VPS plan for your growing workload</p>
+            </div>
+            
+            <!-- Controls -->
+            <div class="pricing-controls">
+                <div class="billing-toggle" role="group" aria-labelledby="billing-label">
+                    <span id="billing-label" class="control-label">Billing Period</span>
+                    <div class="toggle-buttons">
+                        <button type="button" class="toggle-btn active" data-period="monthly" aria-pressed="true">
+                            Monthly
+                        </button>
+                        <button type="button" class="toggle-btn" data-period="annually" aria-pressed="false">
+                            Annually
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="currency-selector">
+                    <label for="currency-select" class="control-label">Currency</label>
+                    <select id="currency-select" class="currency-select" aria-label="Select currency">
+                        <option value="PKR" selected>PKR</option>
+                        <option value="USD">USD</option>
+                        <option value="GBP">GBP</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Pricing Cards -->
+            <div class="pricing-cards">
+                <!-- Starter Plan -->
+                <article class="pricing-card">
+                    <div class="pricing-card-header">
+                        <h3 class="pricing-card-title">Starter</h3>
+                        <p class="pricing-card-description">Perfect for small projects and development</p>
+                    </div>
+                    <div class="pricing-card-price">
+                        <div class="price-display" data-plan="starter">
+                            <span class="price-amount">Rs 2,400</span>
+                            <span class="price-period">/ month</span>
+                        </div>
+                        <div class="price-details" data-plan="starter" style="display: none;">
+                            <div class="price-annual">
+                                <span class="price-amount-annual">Rs 4,000</span>
+                                <span class="price-period-annual">/ month</span>
+                            </div>
+                            <div class="price-billed">Rs 48,000 billed annually</div>
+                            <div class="price-savings">Save Rs 9,600</div>
+                        </div>
+                    </div>
+                    <div class="pricing-card-cta">
+                        <button class="btn btn-secondary btn-full" type="button">Get Started</button>
+                    </div>
+                    <ul class="pricing-card-features">
+                        <li class="feature-item">1 vCPU</li>
+                        <li class="feature-item">1 GB RAM</li>
+                        <li class="feature-item">25 GB NVMe SSD</li>
+                        <li class="feature-item">1 TB Bandwidth</li>
+                        <li class="feature-item">1 IPv4 Address</li>
+                        <li class="feature-item">KVM Virtualization</li>
+                        <li class="feature-item">Full Root Access</li>
+                        <li class="feature-item">Weekly Backup</li>
+                        <li class="feature-item">1 Gbps Network Port</li>
+                        <li class="feature-item">Email Support</li>
+                    </ul>
+                </article>
+                
+                <!-- Growth Plan - Most Popular -->
+                <article class="pricing-card pricing-card-popular">
+                    <div class="pricing-card-badge">Most Popular</div>
+                    <div class="pricing-card-header">
+                        <h3 class="pricing-card-title">Growth</h3>
+                        <p class="pricing-card-description">Ideal for growing businesses and applications</p>
+                    </div>
+                    <div class="pricing-card-price">
+                        <div class="price-display" data-plan="growth">
+                            <span class="price-amount">Rs 4,800</span>
+                            <span class="price-period">/ month</span>
+                        </div>
+                        <div class="price-details" data-plan="growth" style="display: none;">
+                            <div class="price-annual">
+                                <span class="price-amount-annual">Rs 4,000</span>
+                                <span class="price-period-annual">/ month</span>
+                            </div>
+                            <div class="price-billed">Rs 48,000 billed annually</div>
+                            <div class="price-savings">Save Rs 9,600</div>
+                        </div>
+                    </div>
+                    <div class="pricing-card-cta">
+                        <button class="btn btn-primary btn-full" type="button">Get Started</button>
+                    </div>
+                    <ul class="pricing-card-features">
+                        <li class="feature-item">2 vCPU</li>
+                        <li class="feature-item">4 GB RAM</li>
+                        <li class="feature-item">50 GB NVMe SSD</li>
+                        <li class="feature-item">2 TB Bandwidth</li>
+                        <li class="feature-item">1 IPv4 Address</li>
+                        <li class="feature-item">KVM Virtualization</li>
+                        <li class="feature-item">Full Root Access</li>
+                        <li class="feature-item">Daily Backup</li>
+                        <li class="feature-item">1 Gbps Network Port</li>
+                        <li class="feature-item">Priority Support</li>
+                    </ul>
+                </article>
+                
+                <!-- Scale Plan -->
+                <article class="pricing-card">
+                    <div class="pricing-card-header">
+                        <h3 class="pricing-card-title">Scale</h3>
+                        <p class="pricing-card-description">For high-traffic applications and workloads</p>
+                    </div>
+                    <div class="pricing-card-price">
+                        <div class="price-display" data-plan="scale">
+                            <span class="price-amount">Rs 9,600</span>
+                            <span class="price-period">/ month</span>
+                        </div>
+                        <div class="price-details" data-plan="scale" style="display: none;">
+                            <div class="price-annual">
+                                <span class="price-amount-annual">Rs 8,000</span>
+                                <span class="price-period-annual">/ month</span>
+                            </div>
+                            <div class="price-billed">Rs 96,000 billed annually</div>
+                            <div class="price-savings">Save Rs 19,200</div>
+                        </div>
+                    </div>
+                    <div class="pricing-card-cta">
+                        <button class="btn btn-secondary btn-full" type="button">Get Started</button>
+                    </div>
+                    <ul class="pricing-card-features">
+                        <li class="feature-item">4 vCPU</li>
+                        <li class="feature-item">8 GB RAM</li>
+                        <li class="feature-item">100 GB NVMe SSD</li>
+                        <li class="feature-item">3 TB Bandwidth</li>
+                        <li class="feature-item">1 IPv4 Address</li>
+                        <li class="feature-item">KVM Virtualization</li>
+                        <li class="feature-item">Full Root Access</li>
+                        <li class="feature-item">Daily Backup</li>
+                        <li class="feature-item">1 Gbps Network Port</li>
+                        <li class="feature-item">Priority Support</li>
+                    </ul>
+                </article>
+                
+                <!-- Dedicated Core Plan -->
+                <article class="pricing-card">
+                    <div class="pricing-card-header">
+                        <h3 class="pricing-card-title">Dedicated Core</h3>
+                        <p class="pricing-card-description">Maximum performance for demanding workloads</p>
+                    </div>
+                    <div class="pricing-card-price">
+                        <div class="price-display" data-plan="dedicated">
+                            <span class="price-amount">Rs 19,500</span>
+                            <span class="price-period">/ month</span>
+                        </div>
+                        <div class="price-details" data-plan="dedicated" style="display: none;">
+                            <div class="price-annual">
+                                <span class="price-amount-annual">Rs 16,250</span>
+                                <span class="price-period-annual">/ month</span>
+                            </div>
+                            <div class="price-billed">Rs 195,000 billed annually</div>
+                            <div class="price-savings">Save Rs 39,000</div>
+                        </div>
+                    </div>
+                    <div class="pricing-card-cta">
+                        <button class="btn btn-secondary btn-full" type="button">Get Started</button>
+                    </div>
+                    <ul class="pricing-card-features">
+                        <li class="feature-item">6 vCPU</li>
+                        <li class="feature-item">16 GB RAM</li>
+                        <li class="feature-item">200 GB NVMe SSD</li>
+                        <li class="feature-item">5 TB Bandwidth</li>
+                        <li class="feature-item">1 IPv4 Address</li>
+                        <li class="feature-item">KVM Virtualization</li>
+                        <li class="feature-item">Full Root Access</li>
+                        <li class="feature-item">Daily Backup</li>
+                        <li class="feature-item">1 Gbps Network Port</li>
+                        <li class="feature-item">24/7 Priority Support</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table Section -->
+    <section id="comparison" class="comparison">
+        <div class="container">
+            <div class="comparison-header">
+                <h2 class="section-title">Plan Comparison</h2>
+                <p class="section-subtitle">Compare all VPS plans side by side</p>
+                <p class="disclaimer">These specifications are invented for this assessment only and do not represent actual PKHosting VPS specifications.</p>
+            </div>
+            <div class="table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Specification</th>
+                            <th scope="col">Starter</th>
+                            <th scope="col">Growth</th>
+                            <th scope="col">Scale</th>
+                            <th scope="col">Dedicated Core</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">vCPU</th>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>4</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">RAM</th>
+                            <td>1 GB</td>
+                            <td>4 GB</td>
+                            <td>8 GB</td>
+                            <td>16 GB</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">NVMe SSD</th>
+                            <td>25 GB</td>
+                            <td>50 GB</td>
+                            <td>100 GB</td>
+                            <td>200 GB</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Monthly Bandwidth</th>
+                            <td>1 TB</td>
+                            <td>2 TB</td>
+                            <td>3 TB</td>
+                            <td>5 TB</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">IPv4 Address</th>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Virtualization</th>
+                            <td>KVM</td>
+                            <td>KVM</td>
+                            <td>KVM</td>
+                            <td>KVM</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Root Access</th>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Backup</th>
+                            <td>Weekly</td>
+                            <td>Daily</td>
+                            <td>Daily</td>
+                            <td>Daily</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Network Port</th>
+                            <td>1 Gbps</td>
+                            <td>1 Gbps</td>
+                            <td>1 Gbps</td>
+                            <td>1 Gbps</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Support</th>
+                            <td>Email</td>
+                            <td>Priority</td>
+                            <td>Priority</td>
+                            <td>24/7 Priority</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="faq-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary class="faq-question">What is VPS hosting?</summary>
+                    <div class="faq-answer">
+                        <p>VPS (Virtual Private Server) hosting provides dedicated resources in a virtualized environment. 
+                        You get full control over your server with root access, guaranteed CPU, RAM, and storage resources.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">Which VPS plan should I choose?</summary>
+                    <div class="faq-answer">
+                        <p>Choose based on your needs: Starter for small projects, Growth for growing businesses, 
+                        Scale for high-traffic applications, and Dedicated Core for resource-intensive workloads.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">Can I upgrade my VPS later?</summary>
+                    <div class="faq-answer">
+                        <p>Yes, you can upgrade your VPS plan as your needs grow. Contact our sales team to discuss 
+                        upgrade options and ensure a smooth transition.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">Is root access included?</summary>
+                    <div class="faq-answer">
+                        <p>Yes, all our VPS plans include full root access, giving you complete control over your 
+                        server environment and software installations.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">How does annual billing work?</summary>
+                    <div class="faq-answer">
+                        <p>With annual billing, you pay for 10 months and get 12 months of service. This gives you 
+                        significant savings compared to monthly billing.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Methods Section -->
+    <section class="payment">
+        <div class="container">
+            <div class="payment-header">
+                <h2 class="section-title">Payment Methods</h2>
+                <p class="payment-subtitle">Payment methods we'd offer</p>
+            </div>
+            <div class="payment-methods">
+                <span class="payment-chip">Card</span>
+                <span class="payment-chip">PayPal</span>
+                <span class="payment-chip">JazzCash</span>
+                <span class="payment-chip">Easypaisa</span>
+                <span class="payment-chip">Bank Transfer</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-brand">PK Hosting</h3>
+                    <p class="footer-description">Quality-crafted web hosting services in Pakistan with local support.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#pricing">VPS Hosting</a></li>
+                        <li><a href="#comparison">Domains</a></li>
+                        <li><a href="#footer">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Payment</h4>
+                    <p class="footer-payment">We accept Card, PayPal, JazzCash, Easypaisa, Bank Transfer</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 PK Hosting. All rights reserved. This is a fictional VPS pricing page for assessment purposes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

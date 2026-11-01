@@ -1,0 +1,839 @@
+/* PKHosting VPS Pricing - TechAbout Assessment */
+/* CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #1261FF;
+    --color-primary-dark: #0B46C1;
+    --color-primary-light: #EAF2FF;
+    
+    --color-navy: #071A35;
+    --color-navy-soft: #102B4E;
+    
+    --color-background: #F7F9FC;
+    --color-surface: #FFFFFF;
+    
+    --color-text: #102033;
+    --color-text-muted: #5E6B7A;
+    
+    --color-border: #DCE3EC;
+    
+    --color-success: #15803D;
+    --color-success-bg: #EAF8EF;
+    
+    --color-focus: #005FCC;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Screen reader only class */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Header */
+.header {
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.nav-brand-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-navy);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--color-primary);
+}
+
+.nav-link:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.nav-cta {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.625rem 1.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.nav-cta:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.nav-cta:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+.btn-primary:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+.btn-secondary {
+    background-color: var(--color-surface);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary-light);
+}
+
+.btn-secondary:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    padding: 4rem 0 3rem;
+    background: linear-gradient(to bottom, var(--color-surface), var(--color-background));
+}
+
+.hero-content {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.hero-eyebrow {
+    display: inline-block;
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.15;
+    color: var(--color-navy);
+    margin-bottom: 1.25rem;
+}
+
+.hero-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Sections */
+.pricing,
+.comparison,
+.faq,
+.payment {
+    padding: 3rem 0;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-navy);
+    text-align: center;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+.section-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Pricing Header */
+.pricing-header {
+    margin-bottom: 2rem;
+}
+
+/* Pricing Controls */
+.pricing-controls {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+    background-color: var(--color-surface);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+}
+
+.control-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+    font-size: 0.875rem;
+}
+
+.toggle-buttons {
+    display: flex;
+    background-color: var(--color-background);
+    border-radius: 8px;
+    padding: 4px;
+    border: 1px solid var(--color-border);
+}
+
+.toggle-btn {
+    padding: 0.5rem 1.25rem;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    transition: all 0.2s ease;
+}
+
+.toggle-btn.active {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.toggle-btn:hover:not(.active) {
+    background-color: var(--color-border);
+    color: var(--color-text);
+}
+
+.toggle-btn:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+.currency-select {
+    padding: 0.5rem 2rem 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.875rem;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+.currency-select:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+/* Pricing Cards */
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.pricing-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    position: relative;
+    transition: box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card:hover {
+    box-shadow: 0 4px 12px rgba(7, 26, 53, 0.08);
+}
+
+.pricing-card-popular {
+    border-color: var(--color-primary);
+    border-width: 2px;
+}
+
+.pricing-card-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.375rem 1rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.pricing-card-header {
+    margin-bottom: 1rem;
+    padding-top: 0.5rem;
+}
+
+.pricing-card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-navy);
+    margin-bottom: 0.375rem;
+}
+
+.pricing-card-description {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.pricing-card-price {
+    margin-bottom: 1.25rem;
+    min-height: 80px;
+}
+
+.price-amount {
+    font-size: 38px;
+    font-weight: 800;
+    color: var(--color-navy);
+}
+
+.price-period {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+}
+
+.price-amount-annual {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-navy);
+}
+
+.price-period-annual {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+}
+
+.price-billed {
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+.price-savings {
+    color: var(--color-success);
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-top: 0.375rem;
+    background-color: var(--color-success-bg);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.pricing-card-cta {
+    margin-bottom: 1.25rem;
+}
+
+.pricing-card-features {
+    list-style: none;
+    flex-grow: 1;
+}
+
+.feature-item {
+    padding: 0.5rem 0;
+    color: var(--color-text);
+    font-size: 0.875rem;
+    border-bottom: 1px solid var(--color-border);
+    position: relative;
+    padding-left: 1.25rem;
+}
+
+.feature-item:last-child {
+    border-bottom: none;
+}
+
+.feature-item::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-success);
+    font-weight: 600;
+}
+
+/* Comparison Table */
+.comparison-header {
+    margin-bottom: 2rem;
+}
+
+.disclaimer {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    max-width: 100%;
+    background-color: var(--color-surface);
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.comparison-table thead {
+    background-color: var(--color-primary-light);
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 0.875rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.comparison-table th {
+    font-weight: 600;
+    color: var(--color-navy);
+    font-size: 0.875rem;
+}
+
+.comparison-table thead th {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.comparison-table tbody th {
+    background-color: var(--color-background);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.comparison-table tbody tr:last-child th,
+.comparison-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-table td {
+    color: var(--color-text);
+    font-size: 0.875rem;
+}
+
+/* FAQ */
+.faq-header {
+    margin-bottom: 2rem;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.faq-item {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-navy);
+    background-color: var(--color-surface);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+.faq-question::after {
+    content: "+";
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--color-primary);
+}
+
+.faq-item[open] .faq-question::after {
+    content: "-";
+}
+
+.faq-question:hover {
+    background-color: var(--color-primary-light);
+}
+
+.faq-question:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: -2px;
+}
+
+.faq-answer {
+    padding: 0 1.25rem 1rem;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* Payment */
+.payment-header {
+    margin-bottom: 1.5rem;
+}
+
+.payment-subtitle {
+    text-align: center;
+    color: var(--color-text-muted);
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.payment-chip {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    color: var(--color-text);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-navy);
+    color: white;
+    padding: 2.5rem 0 1.5rem;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-brand {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.footer-description {
+    color: #B0B8C1;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.footer-heading {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: #B0B8C1;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+    color: white;
+}
+
+.footer-links a:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.footer-payment {
+    color: #B0B8C1;
+    font-size: 0.875rem;
+}
+
+.footer-bottom {
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-navy-soft);
+    text-align: center;
+}
+
+.footer-copyright {
+    color: #B0B8C1;
+    font-size: 0.75rem;
+}
+
+/* Responsive Design */
+
+/* Desktop - 1440px and above is fine with max-width 1200px */
+@media (max-width: 1024px) {
+    .pricing-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet - 768px */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .nav-menu {
+        gap: 1rem;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .hero-title {
+        font-size: 34px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .pricing-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-controls {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+    
+    .billing-toggle,
+    .currency-selector {
+        width: 100%;
+    }
+    
+    .toggle-buttons {
+        width: 100%;
+    }
+    
+    .toggle-btn {
+        flex: 1;
+    }
+    
+    .currency-select {
+        width: 100%;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* Mobile - 360px */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+    
+    .hero {
+        padding: 3rem 0 2rem;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-actions .btn {
+        width: 100%;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+    
+    .pricing-card {
+        padding: 1.25rem;
+    }
+    
+    .price-amount {
+        font-size: 32px;
+    }
+    
+    .price-amount-annual {
+        font-size: 24px;
+    }
+    
+    .comparison-table th,
+    .comparison-table td {
+        padding: 0.625rem 0.75rem;
+        font-size: 0.8125rem;
+    }
+    
+    .faq-question {
+        padding: 0.875rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .faq-answer {
+        padding: 0 1rem 0.875rem;
+        font-size: 0.875rem;
+    }
+}
+
+/* Ensure no horizontal scroll on body */
+body {
+    overflow-x: hidden;
+}
+
+/* Focus visible for all interactive elements */
+button:focus-visible,
+a:focus-visible,
+select:focus-visible,
+summary:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
