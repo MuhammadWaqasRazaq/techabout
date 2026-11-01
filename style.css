@@ -83,6 +83,15 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--color-navy);
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+}
+
+.brand-svg {
+    height: 1.04em;
+    width: 1.04em;
+    flex-shrink: 0;
 }
 
 .nav-menu {
@@ -101,7 +110,7 @@ body {
 
 .nav-link:hover,
 .nav-link:focus {
-    color: var(--color-primary);
+    color: rgb(26, 165, 74);
 }
 
 .nav-link:focus-visible {
@@ -111,17 +120,18 @@ body {
 }
 
 .nav-cta {
-    background-color: var(--color-primary);
+    background: linear-gradient(to right bottom in oklab, rgb(26, 165, 74) 0px, rgb(19, 138, 61) 100%);
     color: white;
     padding: 0.625rem 1.5rem;
     text-decoration: none;
     border-radius: 8px;
     font-weight: 600;
-    transition: background-color 0.2s ease;
+    transition: background 0.2s ease;
+    border: none;
 }
 
 .nav-cta:hover {
-    background-color: var(--color-primary-dark);
+    background: linear-gradient(to right bottom in oklab, rgb(22, 145, 64) 0px, rgb(16, 120, 53) 100%);
 }
 
 .nav-cta:focus-visible {
@@ -145,14 +155,14 @@ body {
 }
 
 .btn-primary {
-    background-color: var(--color-primary);
+    background: linear-gradient(to right bottom in oklab, rgb(26, 165, 74) 0px, rgb(19, 138, 61) 100%);
     color: white;
-    border-color: var(--color-primary);
+    border-color: rgb(26, 165, 74);
 }
 
 .btn-primary:hover {
-    background-color: var(--color-primary-dark);
-    border-color: var(--color-primary-dark);
+    background: linear-gradient(to right bottom in oklab, rgb(22, 145, 64) 0px, rgb(16, 120, 53) 100%);
+    border-color: rgb(22, 145, 64);
 }
 
 .btn-primary:focus-visible {
@@ -162,12 +172,33 @@ body {
 
 .btn-secondary {
     background-color: var(--color-surface);
-    color: var(--color-primary);
-    border-color: var(--color-primary);
+    color: rgb(26, 165, 74);
+    border-color: rgb(26, 165, 74);
 }
 
 .btn-secondary:hover {
-    background-color: var(--color-primary-light);
+    background-color: rgba(26, 165, 74, 0.05);
+}
+
+.pricing-card:not(.pricing-card-popular) .btn-secondary {
+    background: linear-gradient(to right bottom in oklab, rgb(26, 165, 74) 0px, rgb(19, 138, 61) 100%);
+    color: white;
+    border-color: rgb(26, 165, 74);
+}
+
+.pricing-card:not(.pricing-card-popular) .btn-secondary:hover {
+    background: linear-gradient(to right bottom in oklab, rgb(22, 145, 64) 0px, rgb(16, 120, 53) 100%);
+    border-color: rgb(22, 145, 64);
+}
+
+.hero .btn-secondary {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+
+.hero .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .btn-secondary:focus-visible {
@@ -182,7 +213,7 @@ body {
 /* Hero Section */
 .hero {
     padding: 4rem 0 3rem;
-    background: linear-gradient(to bottom, var(--color-surface), var(--color-background));
+    background-color: #1C1B16;
 }
 
 .hero-content {
@@ -193,7 +224,7 @@ body {
 
 .hero-eyebrow {
     display: inline-block;
-    color: var(--color-primary);
+    color: rgb(26, 165, 74);
     font-weight: 600;
     font-size: 0.875rem;
     letter-spacing: 0.05em;
@@ -204,13 +235,13 @@ body {
     font-size: 48px;
     font-weight: 800;
     line-height: 1.15;
-    color: var(--color-navy);
+    color: white;
     margin-bottom: 1.25rem;
 }
 
 .hero-subtitle {
     font-size: 1.125rem;
-    color: var(--color-text-muted);
+    color: #e0e0e0;
     line-height: 1.7;
     margin-bottom: 2rem;
 }
@@ -295,7 +326,7 @@ body {
 }
 
 .toggle-btn.active {
-    background-color: var(--color-primary);
+    background: linear-gradient(to right bottom in oklab, rgb(26, 165, 74) 0px, rgb(19, 138, 61) 100%);
     color: white;
 }
 
@@ -349,8 +380,33 @@ body {
 }
 
 .pricing-card-popular {
-    border-color: var(--color-primary);
+    background-color: #1C1815;
+    border-color: rgb(26, 165, 74);
     border-width: 2px;
+}
+
+.pricing-card-popular .pricing-card-title {
+    color: white;
+}
+
+.pricing-card-popular .pricing-card-description {
+    color: #b0b0b0;
+}
+
+.pricing-card-popular .price-amount,
+.pricing-card-popular .price-amount-annual {
+    color: white;
+}
+
+.pricing-card-popular .price-period,
+.pricing-card-popular .price-period-annual,
+.pricing-card-popular .price-billed {
+    color: #b0b0b0;
+}
+
+.pricing-card-popular .feature-item {
+    color: #b0b0b0;
+    border-bottom-color: #3a3a3a;
 }
 
 .pricing-card-badge {
@@ -358,7 +414,7 @@ body {
     top: -12px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--color-primary);
+    background: linear-gradient(to right bottom in oklab, rgb(26, 165, 74) 0px, rgb(19, 138, 61) 100%);
     color: white;
     padding: 0.375rem 1rem;
     border-radius: 20px;
@@ -486,7 +542,7 @@ body {
 }
 
 .comparison-table thead {
-    background-color: var(--color-primary-light);
+    background-color: rgba(26, 165, 74, 0.05);
 }
 
 .comparison-table th,
@@ -564,7 +620,7 @@ body {
     content: "+";
     font-size: 1.25rem;
     font-weight: 400;
-    color: var(--color-primary);
+    color: rgb(26, 165, 74);
 }
 
 .faq-item[open] .faq-question::after {
@@ -572,7 +628,7 @@ body {
 }
 
 .faq-question:hover {
-    background-color: var(--color-primary-light);
+    background-color: rgba(26, 165, 74, 0.05);
 }
 
 .faq-question:focus-visible {
@@ -618,7 +674,7 @@ body {
 
 /* Footer */
 .footer {
-    background-color: var(--color-navy);
+    background-color: #120F0D;
     color: white;
     padding: 2.5rem 0 1.5rem;
     margin-top: 2rem;
@@ -635,10 +691,20 @@ body {
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+}
+
+.brand-svg-footer {
+    height: 1.04em;
+    width: 1.04em;
+    flex-shrink: 0;
 }
 
 .footer-description {
-    color: #B0B8C1;
+    color: #b0b0b0;
     font-size: 0.875rem;
     line-height: 1.5;
 }
@@ -659,7 +725,7 @@ body {
 }
 
 .footer-links a {
-    color: #B0B8C1;
+    color: #b0b0b0;
     text-decoration: none;
     font-size: 0.875rem;
     transition: color 0.2s ease;
@@ -677,18 +743,18 @@ body {
 }
 
 .footer-payment {
-    color: #B0B8C1;
+    color: #b0b0b0;
     font-size: 0.875rem;
 }
 
 .footer-bottom {
     padding-top: 1.5rem;
-    border-top: 1px solid var(--color-navy-soft);
+    border-top: 1px solid #2a2a2a;
     text-align: center;
 }
 
 .footer-copyright {
-    color: #B0B8C1;
+    color: #b0b0b0;
     font-size: 0.75rem;
 }
 
