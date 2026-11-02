@@ -7,8 +7,6 @@
 }
 
 :root {
-    --color-primary: #1261FF;
-    --color-primary-dark: #0B46C1;
     --color-primary-light: #EAF2FF;
     
     --color-navy: #071A35;
@@ -24,8 +22,6 @@
     
     --color-success: #15803D;
     --color-success-bg: #EAF8EF;
-    
-    --color-focus: #005FCC;
 }
 
 html {
@@ -113,12 +109,6 @@ body {
     color: rgb(26, 165, 74);
 }
 
-.nav-link:focus-visible {
-    outline: 2px solid var(--color-focus);
-    outline-offset: 2px;
-    border-radius: 4px;
-}
-
 .nav-cta {
     background: linear-gradient(to right bottom in oklab, rgb(26, 165, 74) 0px, rgb(19, 138, 61) 100%);
     color: white;
@@ -135,7 +125,7 @@ body {
 }
 
 .nav-cta:focus-visible {
-    outline: 2px solid var(--color-focus);
+    outline: 2px solid white;
     outline-offset: 2px;
 }
 
@@ -166,7 +156,7 @@ body {
 }
 
 .btn-primary:focus-visible {
-    outline: 2px solid var(--color-focus);
+    outline: 2px solid white;
     outline-offset: 2px;
 }
 
@@ -201,8 +191,13 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+.hero .btn-secondary:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
 .btn-secondary:focus-visible {
-    outline: 2px solid var(--color-focus);
+    outline: 2px solid rgb(26, 165, 74);
     outline-offset: 2px;
 }
 
@@ -331,7 +326,7 @@ body {
 }
 
 .toggle-btn:hover:not(.active) {
-    background-color: var(--color-border);
+    background-color: rgba(0, 0, 0, 0.05);
     color: var(--color-text);
 }
 
@@ -915,11 +910,6 @@ body {
         padding: 0 1rem 0.875rem;
         font-size: 0.875rem;
     }
-}
-
-/* Ensure no horizontal scroll on body */
-body {
-    overflow-x: hidden;
 }
 
 /* Focus visible for all interactive elements */
