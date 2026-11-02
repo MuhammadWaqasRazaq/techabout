@@ -2,7 +2,13 @@
 
 ## Overview
 
-This is a fictional VPS pricing page created for the TechAbout assessment. It demonstrates a responsive, accessible, and offline-capable VPS hosting pricing page for PKHosting.
+This is a fictional VPS pricing page created for the TechAbout assessment.
+
+## Screenshots
+
+### Desktop (1440px)
+![PKHosting VPS Pricing - Desktop](screenshots/PKHosting-VPS-Hosting-1440.png)
+
 
 ## How to run
 
